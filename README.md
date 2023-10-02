@@ -80,15 +80,4 @@ queried_new_template:  <*> close, <*> bytes sent, <*> bytes received, lifetime <
 ===========================================
 Query times:  1
 ===========================================
-Line-12/21320: No match. proxy.cse.cuhk.edu.hk:5070 close, 1228 bytes (1.19 KB) sent, 0 bytes received, lifetime <1 sec
-model:  gpt-3.5-turbo-0613
-queried_new_template:  <*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>
-===========================================
-Query times:  2
-===========================================
-Line-13/21320: No match. proxy.cse.cuhk.edu.hk:5070 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS
-model:  gpt-3.5-turbo-0613
-queried_new_template:  <*> open through proxy <*> HTTPS
-===========================================
-Query times:  3
 ```
