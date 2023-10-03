@@ -1,6 +1,11 @@
 # LILAC: Log Parsing using LLMs with Adaptive Parsing Cache
 
 This is the anonymous replication package for the FSE2024 submission #60 "LILAC: Log Parsing using LLMs with Adaptive Parsing Cache".
+In this paper, we propose LILAC, the first practical LLM-based log parsing framework.
+LILAC consists of two main components: the ICL-enhanced Parser and the adaptive parsing cache.
+
+![The overall framework of LILAC](figures/framework.png)
+
 The detailed parsing time can be found in [full parsing time](figures/parsing_time.png).
 
 ## Repository Organization 
@@ -44,7 +49,7 @@ Please first download the large-scale datasets for log parsing in LogPub from [Z
 
     ```bash
     cd sampling/
-    python LILAC_sampling
+    python LILAC_sampling.py
     ```
 
 - Online Log Parsing
@@ -67,29 +72,3 @@ The parsed results and evaluation results will be saved in the `result/` directo
 
 We have provided the saved evaluation metric files of LILAC with different settings in the directory of `result/`.
 Besides, we provide the fully parsed results of LILAC in default settings (i.e., 32 candidates, 3 demonstrations and ChatGPT) in [anonymous Google Drive](https://drive.google.com/file/d/1OJcPjHCEjBIz1rCR98CO27JDX1O9AP7f/view?usp=share_link).
-
-## Running Sample:
-
-```bash
-=== Evaluation on Proxifier ===
-start parsing.
-Parsing file: ../../full_dataset/Proxifier/Proxifier_full.log
-===========================================
-Line-0/21320: No match. proxy.cse.cuhk.edu.hk:5070 close, 0 bytes sent, 0 bytes received, lifetime <1 sec
-model:  gpt-3.5-turbo-0613
-queried_new_template:  <*> close, <*> bytes sent, <*> bytes received, lifetime <*>
-===========================================
-Query times:  1
-===========================================
-Line-12/21320: No match. proxy.cse.cuhk.edu.hk:5070 close, 1228 bytes (1.19 KB) sent, 0 bytes received, lifetime <1 sec
-model:  gpt-3.5-turbo-0613
-queried_new_template:  <*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>
-===========================================
-Query times:  2
-===========================================
-Line-13/21320: No match. proxy.cse.cuhk.edu.hk:5070 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS
-model:  gpt-3.5-turbo-0613
-queried_new_template:  <*> open through proxy <*> HTTPS
-===========================================
-Query times:  3
-```
