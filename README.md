@@ -26,48 +26,48 @@ The detailed parsing time can be found in [full parsing time](figures/parsing_ti
 
 Please first download the large-scale datasets for log parsing in LogPub from [Zenodo](https://zenodo.org/record/8275861) and unzip these datasets into the directory of `full_dataset`.
 
+## Quick Start
 
-## Installation
+###  Installation
 
 1. Install ```python >= 3.8```
 2. ```pip install -r requirements.txt```
 
 
-## Execution
+### Execution
 
-### Candidate Sampling
+- Candidate Sampling (optional)
 
-We have provided the saved sampled candidate logs for reproducing.
+    We have provided the saved sampled candidate logs for reproducing.
+    One can also delete the `full_dataset/sampled_examples` and execute the LILAC's sampling algorithm as follows:
 
-One can also delete the `full_dataset/sampled_examples` and execute the LILAC's sampling algorithm as follows:
+    ```bash
+    cd sampling/
+    python LILAC_sampling
+    ```
 
-```bash
-cd sampling/
-python LILAC_sampling
-```
+- Online Log Parsing
 
-### Online Log Parsing
+    Please first add an OpenAI API key (`sk-xxxx`) into the second line of openai_key.txt.
 
-Please first add an OpenAI API key (`sk-xxxx`) into the second line of openai_key.txt.
+    We provide a one-click script to run LILAC for online log parsing.
 
-We provide a one-click script to run LILAC for online log parsing.
+    ```bash
+    ./online_parsing.sh
+    ```
 
-```bash
-./online_parsing.sh
-```
+    One can also go to `benchmark/evaluation` and execute:
 
-One can also go to `benchmark/evaluation` and execute:
-
-```bash
-python LILAC_eval.py --shot [candidates] --example_size [demonstrations] --model [model]
-```
+    ```bash
+    python LILAC_eval.py --shot [candidates] --example_size [demonstrations] --model [model]
+    ```
 
 The parsed results and evaluation results will be saved in the `result/` directory.
 
 We have provided the saved evaluation metric files of LILAC with different settings in the directory of `result/`.
 Besides, we provide the fully parsed results of LILAC in default settings (i.e. 32 candidates, 3 demonstrations and ChatGPT) in [anonymous Google Drive](https://drive.google.com/file/d/1OJcPjHCEjBIz1rCR98CO27JDX1O9AP7f/view?usp=share_link).
 
-### Running Sample:
+## Running Sample:
 
 ```bash
 === Evaluation on Proxifier ===
