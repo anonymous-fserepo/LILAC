@@ -39,6 +39,7 @@ Please first download the large-scale datasets for log parsing in LogPub from [Z
 - Candidate Sampling (optional)
 
     We have provided the saved sampled candidate logs for reproducing.
+
     One can also delete the `full_dataset/sampled_examples` and execute the LILAC's sampling algorithm as follows:
 
     ```bash
@@ -65,7 +66,7 @@ Please first download the large-scale datasets for log parsing in LogPub from [Z
 The parsed results and evaluation results will be saved in the `result/` directory.
 
 We have provided the saved evaluation metric files of LILAC with different settings in the directory of `result/`.
-Besides, we provide the fully parsed results of LILAC in default settings (i.e. 32 candidates, 3 demonstrations and ChatGPT) in [anonymous Google Drive](https://drive.google.com/file/d/1OJcPjHCEjBIz1rCR98CO27JDX1O9AP7f/view?usp=share_link).
+Besides, we provide the fully parsed results of LILAC in default settings (i.e., 32 candidates, 3 demonstrations and ChatGPT) in [anonymous Google Drive](https://drive.google.com/file/d/1OJcPjHCEjBIz1rCR98CO27JDX1O9AP7f/view?usp=share_link).
 
 ## Running Sample:
 
@@ -80,4 +81,15 @@ queried_new_template:  <*> close, <*> bytes sent, <*> bytes received, lifetime <
 ===========================================
 Query times:  1
 ===========================================
+Line-12/21320: No match. proxy.cse.cuhk.edu.hk:5070 close, 1228 bytes (1.19 KB) sent, 0 bytes received, lifetime <1 sec
+model:  gpt-3.5-turbo-0613
+queried_new_template:  <*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>
+===========================================
+Query times:  2
+===========================================
+Line-13/21320: No match. proxy.cse.cuhk.edu.hk:5070 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS
+model:  gpt-3.5-turbo-0613
+queried_new_template:  <*> open through proxy <*> HTTPS
+===========================================
+Query times:  3
 ```
