@@ -1,12 +1,14 @@
 # LILAC: Log Parsing using LLMs with Adaptive Parsing Cache
 
 This is the anonymous replication package for the FSE2024 submission #60 "LILAC: Log Parsing using LLMs with Adaptive Parsing Cache".
+We will also make this repository publicly available upon acceptance.
+
 In this paper, we propose LILAC, the first practical LLM-based log parsing framework.
 LILAC consists of two main components: the ICL-enhanced Parser and the adaptive parsing cache.
 
 ![The overall framework of LILAC](figures/framework.png)
 
-The detailed parsing time can be found in [full parsing time](figures/parsing_time.png).
+The detailed parsing time can be found in [detailed parsing time for RQ4](figures/parsing_time.png).
 
 ## Repository Organization 
 
@@ -27,11 +29,11 @@ The detailed parsing time can be found in [full parsing time](figures/parsing_ti
 ```
 
 
-## Datasets
+## Quick Start
+
+### Datasets
 
 Please first download the large-scale datasets for log parsing in LogPub from [Zenodo](https://zenodo.org/record/8275861) and unzip these datasets into the directory of `full_dataset`.
-
-## Quick Start
 
 ###  Installation
 
